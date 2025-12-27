@@ -95,28 +95,7 @@ const menuOptions = computed(() => [
                 icon: () => h(NIcon, { component: Home })
             }),
         key: "home"
-    },
-    {
-        label: () => h(
-            NButton,
-            {
-                text: true,
-                size: "small",
-                type: menuValue.value == "user" ? "primary" : "default",
-                style: "width: 100%",
-                onClick: async () => {
-                    await router.push(getRouterPathWithLang("/user", locale.value));
-                    showMobileMenu.value = false;
-                }
-            },
-            {
-                default: () => t('user'),
-                icon: () => h(NIcon, { component: User }),
-            }
-        ),
-        key: "user",
-        show: !isTelegram.value
-    },
+    },    
     {
         label: () => h(
             NButton,
