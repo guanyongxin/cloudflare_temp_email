@@ -213,7 +213,7 @@ const logoClick = async () => {
         logoClickCount.value = 0;
         return;
     }
-    if (logoClickCount.value >= 5) {
+    if (logoClickCount.value >= 15) {
         logoClickCount.value = 0;
         message.info("Change to admin Page");
         loading.value = true;
@@ -221,10 +221,7 @@ const logoClick = async () => {
         loading.value = false;
     } else {
         logoClickCount.value++;
-    }
-    if (logoClickCount.value > 0) {
-        message.info(`Click ${5 - logoClickCount.value + 1} times to enter the admin page`);
-    }
+    }    
 }
 
 onMounted(async () => {
