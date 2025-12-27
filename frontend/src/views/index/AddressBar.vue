@@ -127,12 +127,7 @@ onMounted(async () => {
                 </n-alert>
                 <Login />
                 <n-divider />
-                <n-button @click="onUserLogin" type="primary" block secondary strong>
-                    <template #icon>
-                        <n-icon :component="User" />
-                    </template>
-                    {{ t('userLogin') }}
-                </n-button>
+                
             </n-card>
         </div>
         <n-modal v-model:show="showTelegramChangeAddress" preset="card" :title="t('changeAddress')">
