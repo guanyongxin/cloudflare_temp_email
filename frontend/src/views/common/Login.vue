@@ -268,7 +268,9 @@ onMounted(async () => {
 
 <template>
     <div>
-        
+        <n-alert v-if="userSettings.user_email" :show-icon="false" :bordered="false" closable>
+            <span>{{ t('bindUserInfo') }}</span>
+        </n-alert>
         <n-tabs v-if="openSettings.fetched" v-model:value="tabValue" size="large" justify-content="space-evenly">
             <n-tab-pane name="signin" :tab="loginAndBindTag">
                 <n-form>
