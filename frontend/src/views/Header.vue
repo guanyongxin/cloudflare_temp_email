@@ -62,7 +62,7 @@ const { locale, t } = useI18n({
             ok: 'OK',
         },
         zh: {
-            title: '10分钟临时邮件',
+            title: '10分钟 临时邮件',
             dark: '暗色',
             light: '亮色',
             accessHeader: '访问密码',
